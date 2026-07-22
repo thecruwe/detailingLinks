@@ -1,15 +1,15 @@
 :root {
-  --bg: #0a0b14;
-  --bg-soft: #12131f;
+  --bg: #0a0a0a;
+  --bg-soft: #121212;
   --card: rgba(255, 255, 255, 0.04);
   --card-hover: rgba(255, 255, 255, 0.07);
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
   --text: #f4f5fb;
   --muted: #8b8fa8;
-  --accent-1: #6366f1;
-  --accent-2: #8b5cf6;
-  --accent-3: #22d3ee;
+  --accent-1: #e10600;
+  --accent-2: #ff2d2d;
+  --accent-3: #7f1010;
   --radius: 18px;
 }
 
@@ -52,7 +52,7 @@ body::after {
   background: var(--accent-3);
   bottom: -200px;
   right: -160px;
-  opacity: 0.25;
+  opacity: 0.35;
 }
 
 .page {
@@ -75,34 +75,23 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  box-shadow: 0 12px 40px -8px rgba(99, 102, 241, 0.6);
+  background: #000;
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.6);
   position: relative;
   overflow: hidden;
 }
-.logo::after {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: 27px;
-  background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
-  z-index: 0;
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.logo span {
-  position: relative;
-  z-index: 1;
-  font-weight: 800;
-  font-size: 30px;
-  letter-spacing: -1px;
-  color: #fff;
-}
-.logo img { display: none; }
 
 .title {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  background: linear-gradient(90deg, #fff, #c7c9ff);
+  background: linear-gradient(90deg, #fff, #ff6b6b);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -168,18 +157,8 @@ body::after {
 }
 .link:hover .arrow { transform: translateX(3px); color: var(--text); }
 
-.link[data-brand="vk"]:hover { box-shadow: 0 8px 30px -10px #0077FF; }
-.link[data-brand="vk"]:hover .icon { background: #0077FF; }
-.link[data-brand="ig"]:hover { box-shadow: 0 8px 30px -10px #dd2a7b; }
-.link[data-brand="ig"]:hover .icon { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
-.link[data-brand="tg"]:hover { box-shadow: 0 8px 30px -10px #2AABEE; }
-.link[data-brand="tg"]:hover .icon { background: #2AABEE; }
-.link[data-brand="wa"]:hover { box-shadow: 0 8px 30px -10px #25D366; }
-.link[data-brand="wa"]:hover .icon { background: #25D366; }
-.link[data-brand="phone"]:hover { box-shadow: 0 8px 30px -10px var(--accent-1); }
-.link[data-brand="phone"]:hover .icon { background: var(--accent-1); }
-.link[data-brand="map"]:hover { box-shadow: 0 8px 30px -10px var(--accent-3); }
-.link[data-brand="map"]:hover .icon { background: var(--accent-3); }
+.link[data-brand]:hover { box-shadow: 0 8px 30px -8px var(--accent-1); border-color: rgba(225, 6, 0, 0.4); }
+.link[data-brand]:hover .icon { background: var(--accent-1); }
 
 .footer {
   text-align: center;
